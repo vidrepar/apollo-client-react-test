@@ -1,12 +1,9 @@
 import React from "react";
 import gql from "graphql-tag";
 import { useQuery } from "@apollo/react-hooks";
-import { spawn } from "child_process";
 
 export default function ExchangeRates() {
   const { loading, error, data } = useQuery(RATES_QUERY);
-
-  console.log(data);
 
   return (
     <>
